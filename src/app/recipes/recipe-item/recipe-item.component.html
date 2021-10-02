@@ -1,0 +1,18 @@
+<a
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item list-group-item-action"
+  aria-current="true">
+  <div class="d-flex w-100 justify-content-between">
+    <div>
+      <h5 class="mb-1">{{ recipe.name }}</h5>
+      <p class="mb-1">{{ recipe.description }}</p>
+    </div>
+    <img
+      src="{{ recipe.imagePath }}"
+      class="img-responsive"
+      alt="{{ recipe.name }}"
+      style="max-height: 5rem"
+    />
+  </div>
+</a>
