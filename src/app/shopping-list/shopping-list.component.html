@@ -3,10 +3,12 @@
     <app-shopping-edit></app-shopping-edit>
     <hr>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let ingr of ingredients">
-        {{ingr.name}}
-        <span class="badge bg-primary rounded-pill">{{ingr.amount}}</span>
-      </li>
-    </ul>
+        <a class="list-group-item" (click)="onEdit(i)" *ngFor="let ingr of ingredients; let i = index">
+          <li class="d-flex justify-content-between align-items-start" >
+            {{ingr.name}}
+            <span class="badge bg-primary rounded-pill">{{ingr.amount}}</span>
+          </li>
+        </a>
+      </ul>
   </div>
 </div>
